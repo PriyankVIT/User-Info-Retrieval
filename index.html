@@ -6,66 +6,10 @@
     <title>User Info Retrieval</title>
     <script src="https://apis.google.com/js/platform.js" async defer></script>
     <meta name="google-signin-client_id" content="396870052791-6qjijc9oullrjl1nulqsurbcseb5f5v5.apps.googleusercontent.com">
-
-
-
+    <script src="index.js"></script>
 </head>
 <body>
     <div class="g-signin2" data-onsuccess="onSignIn"></div>
-    <a href="#" onclick="signOut();">Sign out</a>
-
-    <pre id="object">
-        <!-- OBJECT -->
-    </pre>
-
-    <script>
-        gapi.load('auth2', function () {
-            var auth2 = gapi.auth2.init();
-            auth2.signIn().then(function () {
-                console.log(auth2.currentUser.get().getId());
-            });
-        });
-        function onSignIn(googleUser) {
-            var profile = googleUser.getBasicProfile();
-            console.log('Full Name: ' + profile.getName());
-            console.log("Image URL: " + profile.getImageUrl());
-            console.log("Email: " + profile.getEmail());
-        }
-        function signOut() {
-            var auth2 = gapi.auth2.getAuthInstance();
-            auth2.signOut().then(function () {
-            console.log('User signed out.');
-            });
-        }
-        </script>
-        <!-- The core Firebase JS SDK is always required and must be listed first -->
-        <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
-
-        <!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
-        <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-analytics.js"></script>
-
-        <script>
-        // Your web app's Firebase configuration
-        var firebaseConfig = {
-            apiKey: "AIzaSyBinptcookM_RnYO8b1R-5LdnDckmbl20s",
-            authDomain: "user-info-retrieval.firebaseapp.com",
-            databaseURL: "https://user-info-retrieval.firebaseio.com",
-            projectId: "user-info-retrieval",
-            storageBucket: "user-info-retrieval.appspot.com",
-            messagingSenderId: "482726679336",
-            appId: "1:482726679336:web:314a04d68e4808cad1f61d",
-            measurementId: "G-WJ53V5ME26"
-        };
-        // Initialize Firebase
-        firebase.initializeApp(firebaseConfig);
-        firebase.analytics();
-
-        const preObject = document.getElementById('object');
-
-        const dbRefObject = firebase.database().ref().child('object');
-
-        dbRefObject.on('value', snap => console.log(snap.val()));
-        </script>       
+    <a href="#" onclick="signOut();">Sign out</a>    
 </body>
 </html>
