@@ -6,10 +6,6 @@
     <title>User Info Retrieval</title>
     <script src="https://apis.google.com/js/platform.js" async defer></script>
     <meta name="google-signin-client_id" content="396870052791-6qjijc9oullrjl1nulqsurbcseb5f5v5.apps.googleusercontent.com">
-</head>
-<body>
-    <div class="g-signin2" data-onsuccess="onSignIn"></div>
-    <button onclick="onSignIn()">Retrive</button>
     <script>
         function onSignIn(googleUser) {
         var profile = googleUser.getBasicProfile();
@@ -19,5 +15,9 @@
         console.log('Image URL: ' + profile.getImageUrl());
         }
     </script>
+</head>
+<body>
+    <div class="g-signin2" data-onsuccess="onSignIn"></div>
+    <button onclick="onSignIn()">Retrive</button>
 </body>
 </html>
