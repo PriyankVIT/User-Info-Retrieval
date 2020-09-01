@@ -24,7 +24,7 @@
 
     addBtn.addEventListener('click', (e) => {
         e.preventDefault();
-        database.ref('/users/'+ profile.getName().value).set({
-            name: profile.getName().value
+        database.ref('/users/'+ profile.getName()).set({
+            name: profile.getName()
         })
     });
