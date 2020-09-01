@@ -9,6 +9,7 @@
 </head>
 <body>
     <div class="g-signin2" data-onsuccess="onSignIn"></div>
+    <button onclick="onSignIn()">Retrive</button>
     <script>
         function onSignIn(googleUser) {
         var profile = googleUser.getBasicProfile();
