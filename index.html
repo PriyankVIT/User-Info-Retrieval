@@ -9,14 +9,17 @@
 </head>
 <body>
     <div>
-        <h1 id="bigOne"></h1>
-        <!-- <p>This is a project used to demonstrate the Retrieval of User 
+        <!-- <h1 id="bigOne"></h1> -->
+        <!-- <input type="text" id="name" placeholder="Name">
+        <input type="text" id="country" placeholder="Country">
+        <button id="button">Save Data</button> -->
+        <p>This is a project used to demonstrate the Retrieval of User 
             Data. 
         </p>
     </div>
     <div class="g-signin2" data-onsuccess="onSignIn"></div>
     <br>
-    <a href="#" onclick="signOut();">Sign out</a> -->
+    <a href="#" onclick="signOut();">Sign out</a>
     <script src="index.js"></script>
     <!-- The core Firebase JS SDK is always required and must be listed first -->
 <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
@@ -40,12 +43,33 @@
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
   firebase.analytics();
-  
-  var bigOne = document.getElementById('bigOne');
-  var dbRef = firebase.database().ref().child('text');
-  dbRef.on('value', snap => bigOne.innerText = snap.val());
 
+//   var bigOne = document.getElementById('bigOne');
+//   var dbRef = firebase.database().ref().child('text');
+//   dbRef.on('value', snap => bigOne.innerText = snap.val());
+//   let button = document.getElementById("button");
+
+//   button.addEventListener("click", function() {
+//     let name = document.getElementById("name").value;
+//     let country = document.getElementById("country").value;
+//     if (name == "" || country == ""){
+//         alert("Please Enter fiels");
+//     }
+//     else{
+//         var data = {
+//             name: name,
+//             country: country 
+//         }
+//     var database = firebase.database();
+//     var ref = database.ref("records");
+//     ref.push(data);
+//     }
+//   })
 
 </script>
 </body>
 </html>
+
+<div>
+
+</div>

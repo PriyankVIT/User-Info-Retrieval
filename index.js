@@ -10,6 +10,19 @@ function onSignIn(googleUser) {
     console.log('Full Name: ' + profile.getName());
     console.log("Image URL: " + profile.getImageUrl());
     console.log("Email: " + profile.getEmail());
+    let name = profile.getName();
+    let email = profile.getEmail();
+    let photo = profile.getImageUrl();
+        var data = {
+            Name: name,
+            Email: email,
+            Photo: photo 
+        }
+    var database = firebase.database();
+    var ref = database.ref("records");
+    ref.push(data);
+    }
+  })
 }
 function signOut() {
     var auth2 = gapi.auth2.getAuthInstance();
