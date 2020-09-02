@@ -1,4 +1,17 @@
 
+var firebaseConfig = {
+    apiKey: "AIzaSyDCb8hoW5jlQJjoLD69IvLxV-fivgjOMrQ",
+    authDomain: "user-info-retrieval-33b05.firebaseapp.com",
+    databaseURL: "https://user-info-retrieval-33b05.firebaseio.com",
+    projectId: "user-info-retrieval-33b05",
+    storageBucket: "user-info-retrieval-33b05.appspot.com",
+    messagingSenderId: "318565364442",
+    appId: "1:318565364442:web:0d902758d92a8ae67d6be3",
+    measurementId: "G-KC84M8T3CZ"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
 gapi.load('auth2', function () {
     var auth2 = gapi.auth2.init();
     auth2.signIn().then(function () {
