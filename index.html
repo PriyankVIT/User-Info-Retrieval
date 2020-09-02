@@ -8,8 +8,38 @@
     <meta name="google-signin-client_id" content="396870052791-6qjijc9oullrjl1nulqsurbcseb5f5v5.apps.googleusercontent.com">
 </head>
 <body>
+    <div>
+        <h1>Retrieve User Information</h1>
+        <p>This is a project used to demonstrate the Retrieval of User 
+            Data. 
+        </p>
+    </div>
     <div class="g-signin2" data-onsuccess="onSignIn"></div>
+    <br>
     <a href="#" onclick="signOut();">Sign out</a>
     <script src="index.js"></script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-database.js"></script>
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyDCb8hoW5jlQJjoLD69IvLxV-fivgjOMrQ",
+    authDomain: "user-info-retrieval-33b05.firebaseapp.com",
+    databaseURL: "https://user-info-retrieval-33b05.firebaseio.com",
+    projectId: "user-info-retrieval-33b05",
+    storageBucket: "user-info-retrieval-33b05.appspot.com",
+    messagingSenderId: "318565364442",
+    appId: "1:318565364442:web:0d902758d92a8ae67d6be3",
+    measurementId: "G-KC84M8T3CZ"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
 </body>
 </html>
