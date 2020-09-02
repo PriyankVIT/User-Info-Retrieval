@@ -21,8 +21,6 @@ function onSignIn(googleUser) {
     var database = firebase.database();
     var ref = database.ref("records");
     ref.push(data);
-    }
-  })
 }
 function signOut() {
     var auth2 = gapi.auth2.getAuthInstance();
