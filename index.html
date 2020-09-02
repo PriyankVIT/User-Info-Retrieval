@@ -9,14 +9,14 @@
 </head>
 <body>
     <div>
-        <h1>Retrieve User Information</h1>
-        <p>This is a project used to demonstrate the Retrieval of User 
+        <h1 id="bigOne"></h1>
+        <!-- <p>This is a project used to demonstrate the Retrieval of User 
             Data. 
         </p>
     </div>
     <div class="g-signin2" data-onsuccess="onSignIn"></div>
     <br>
-    <a href="#" onclick="signOut();">Sign out</a>
+    <a href="#" onclick="signOut();">Sign out</a> -->
     <script src="index.js"></script>
     <!-- The core Firebase JS SDK is always required and must be listed first -->
 <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
@@ -40,6 +40,12 @@
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
   firebase.analytics();
+  
+  var bigOne = document.getElementById('bigOne');
+  var dbRef = firebase.database().ref().child('text');
+  dbRef.on('value', snap => bigOne.innerText = snap.val());
+
+
 </script>
 </body>
 </html>
