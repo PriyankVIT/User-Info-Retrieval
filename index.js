@@ -37,7 +37,7 @@ function onSignIn(googleUser) {
     ref.on("value", function(snapshot) {
         snapshot.forEach(function(childSnapshot) {
             var data = childSnapshot.val()
-            console.log(data.name);
+            console.log(data.Name);
         })
     })
 }
